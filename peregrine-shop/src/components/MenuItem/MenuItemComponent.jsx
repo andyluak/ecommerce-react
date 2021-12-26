@@ -1,10 +1,16 @@
-import React from 'react';
-import './MenuItem.scss';
+import React from 'react'
+import withRouter from '../withRouter';
+import './MenuItem.scss'
 
-export default function MenuItemComponent( { title, imageUrl, size } ) {
+const MenuItemComponent = ({ title, imageUrl, size, router, linkUrl }) => {
+	console.log(router );
+	const {navigate }= router;
 	return (
-		<div className={`menu-item ${size}`} >
-			<div className="background-image" style={{backgroundImage : `url(${imageUrl})`}}/>
+		<div className={`menu-item ${size}`} onClick={() => navigate(linkUrl)}>
+			<div
+				className="background-image"
+				style={{ backgroundImage: `url(${imageUrl})` }}
+			/>
 			<div className="content">
 				<h1 className="title">{title.toUpperCase()}</h1>
 				<span className="subtitle">SHOP NOW</span>
@@ -12,3 +18,5 @@ export default function MenuItemComponent( { title, imageUrl, size } ) {
 		</div>
 	)
 }
+
+export default withRouter(MenuItemComponent);
