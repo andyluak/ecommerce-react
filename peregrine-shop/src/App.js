@@ -5,19 +5,13 @@ import './App.css';
 import HomePage from './pages/homepage/homepage';
 import ShopPage from './pages/shoppage/shop';
 import SignInSignUp from './pages/sign-in-sign-up/signInSignUp';
+import CheckoutPage from './pages/checkout/checkout';
 import Header from './components/Header/Header';
 import { auth, createUserProfile } from './firebase/firebase.utils';
 import { setCurrentUser } from './redux/user/user.actions';
+import { selectCurrentUser } from './redux/user/user.selectors';
 
 class App extends React.Component {
-	constructor() {
-		super();
-
-		this.state = {
-			currentUser: null,
-		};
-	}
-
 	unsubscribeFromAuth = null;
 
 	componentDidMount() {
@@ -59,14 +53,15 @@ class App extends React.Component {
 							)
 						}
 					/>
+					<Route path="/checkout" element={<CheckoutPage />} />
 				</Routes>
 			</div>
 		);
 	}
 }
 
-const mapStateToProps = ({ user }) => ({
-	currentUser: user.currentUser,
+const mapStateToProps = (state) => ({
+	currentUser: selectCurrentUser(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({
