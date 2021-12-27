@@ -3,7 +3,6 @@ import withRouter from '../withRouter';
 import './MenuItem.scss'
 
 const MenuItemComponent = ({ title, imageUrl, size, router, linkUrl }) => {
-	console.log(router );
 	const {navigate }= router;
 	return (
 		<div className={`menu-item ${size}`} onClick={() => navigate(linkUrl)}>

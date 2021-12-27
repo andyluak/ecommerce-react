@@ -51,6 +51,7 @@ class SignIn extends React.Component {
 						handleChange={this.handleChange}
 						label="Password"
 						required
+						autoComplete="current-password"
 					/>
 					<div className="buttons">
 						<CustomButton type="submit">
