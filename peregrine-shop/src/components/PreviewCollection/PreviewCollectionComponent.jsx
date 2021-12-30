@@ -1,8 +1,11 @@
 import React from 'react'
+import withRouter from '../withRouter';
+
 import './PreviewCollection.scss'
 import CollectionItem from '../CollectionItem/CollectionItem'
 
-export default function PreviewCollectionComponent({ title, items }) {
+const PreviewCollectionComponent = ({ title, items, router }) =>{
+
 	return (
 		<div className="collection-preview">
 			<h1> {title.toUpperCase()} </h1>
@@ -16,3 +19,5 @@ export default function PreviewCollectionComponent({ title, items }) {
 		</div>
 	)
 }
+
+export default withRouter(PreviewCollectionComponent);
