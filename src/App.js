@@ -1,12 +1,18 @@
 import React from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import { connect } from 'react-redux';
+
+
 import './App.css';
+
+
 import HomePage from './pages/homepage/homepage';
 import ShopPage from './pages/shoppage/shop';
 import SignInSignUp from './pages/sign-in-sign-up/signInSignUp';
 import CheckoutPage from './pages/checkout/checkout';
 import Header from './components/Header/Header';
+
+
 import { auth, createUserProfile } from './firebase/firebase.utils';
 import { setCurrentUser } from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selectors';
