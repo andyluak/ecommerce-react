@@ -1,4 +1,5 @@
 import React from 'react'
+import { withTranslation } from "react-i18next";
 
 import './SignIn.scss'
 import FormInput from '../../components/FormInput/FormInput';
@@ -9,7 +10,6 @@ import {auth, signInWithGoogle } from '../../firebase/firebase.utils';
 class SignIn extends React.Component {
 	constructor(props) {
 		super(props)
-
 		this.state = {
 			email: '',
 			password: '',
@@ -43,8 +43,8 @@ class SignIn extends React.Component {
 	render() {
 		return (
 			<div className="sign-in">
-				<h2>I already have an account</h2>
-				<span>Sign in with your email and password</span>
+				<h2>{this.props.t("signIn.alreadyHaveAccount")}</h2>
+				<span>{this.props.t("signIn.signInWithEmail")}</span>
 
 				<form onSubmit={this.handleSubmit}>
 					<FormInput
@@ -52,7 +52,7 @@ class SignIn extends React.Component {
 						type="email"
 						value={this.state.email}
 						handleChange={this.handleChange}
-						label="Email"
+						label={this.props.t("form.email")}
 						required
 					/>
 					<FormInput
@@ -60,16 +60,16 @@ class SignIn extends React.Component {
 						type="password"
 						value={this.state.password}
 						handleChange={this.handleChange}
-						label="Password"
+						label={this.props.t("form.password")}
 						required
 						autoComplete="current-password"
 					/>
 					<div className="buttons">
 						<CustomButton type="submit">
-							Sign In
+							{this.props.t("form.signIn")}
 						</CustomButton>
 						<CustomButton onClick={signInWithGoogle} isGoogleSignIn='true'>
-							Sign In With Google
+							{this.props.t("form.signInWithGoogle")}
 						</CustomButton>
 					</div>
 				</form>
@@ -78,4 +78,4 @@ class SignIn extends React.Component {
 	}
 }
 
-export default SignIn
+export default withTranslation()(SignIn)

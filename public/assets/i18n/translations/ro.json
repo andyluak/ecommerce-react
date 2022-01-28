@@ -1,0 +1,45 @@
+{
+	"shop.label": "MAGAZIN",
+
+	"contact.label": "CONTACT",
+
+	"signIn.label": "AUTENTIFICARE",
+	"signIn.alreadyHaveAccount": "Ai deja un cont",
+	"signIn.signInWithEmail": "Autentificare cu email si parola",
+	"signIn.donotHaveAccount": "Nu ai deja un cont",
+	"signIn.signUpWithEmail": "Creare cont cu email si parola",
+
+	"contact.header": "CONTACTATI-NE",
+	"contact.formSend": "Multumim pentru mesaj! Va vom raspunde in cel mai scurt timp posibil.",
+
+	"directory.callToAction": "CUMPARA ACUM !",
+	"directory.hats": "PALARII",
+	"directory.mens": "BARBATI",
+	"directory.womens": "FEMEI",
+	"directory.jackets": "JACHETE",
+	"directory.sneakers": "PAPUCI",
+
+	"form.message": "Simțiți-vă liber să trimiteți un mesaj, suntem mai mult decât bucuroși să auzim de la dvs",
+	"form.firstName": "Prenume",
+	"form.lastName": "Nume",
+	"form.email": "Email",
+	"form.submit": "Trimite",
+	"form.password": "Parolă",
+	"form.confirmPassword": "Confirmă parola",
+	"form.signIn": "Autentificare",
+	"form.signUp": "Înregistrare",
+	"form.signInWithGoogle": "Autentificare Google",
+	"cart.addToCart": "Adauga in cos",
+	"cart.empty": "Cosul este gol",
+	"cart.goToCheckout": "Finalizeaza",
+	"checkout.product": "Produs",
+	"checkout.description": "Descriere",
+	"checkout.quantity": "Cantitate",
+	"checkout.price": "Pret",
+	"checkout.remove": "Sterge",
+	"checkout.total": "Total",
+	"checkout.testPay": "Te rog foloseste acest card pentru a testa plata",
+	"checkout.payNow": "Plateste acum",
+	"checkout.paymentTotal": "Total de plata este",
+	"checkout.paymentSuccesful": "Plata a fost efectuata cu succes"
+}

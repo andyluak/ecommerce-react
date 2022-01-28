@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { withTranslation } from "react-i18next";
 
 import './SignUp.scss'
 import FormInput from '../../components/FormInput/FormInput'
@@ -6,7 +7,7 @@ import CustomButton from '../../components/CustomButton/CustomButton'
 
 import { auth, createUserProfile } from '../../firebase/firebase.utils'
 
-export default class SignUp extends Component {
+class SignUp extends Component {
 	constructor() {
 		super()
 
@@ -46,11 +47,12 @@ export default class SignUp extends Component {
 		}
 	}
 	render() {
+		const { t } = this.props
 		const { displayName, email, password, confirmPassword } = this.state
 		return (
 			<div className="sign-up">
-				<h2>I do not have an account</h2>
-				<span>Sign up with your email and password</span>
+				<h2>{t("signIn.donotHaveAccount")}</h2>
+				<span>{t("signIn.signUpWithEmail")}</span>
 
 				<form onSubmit={this.handleSubmit}>
 					<FormInput
@@ -58,7 +60,7 @@ export default class SignUp extends Component {
 						name="displayName"
 						value={displayName}
 						handleChange={this.handleChange}
-						label="Display Name"
+						label={t("form.firstName")}
 						required
 					/>
 					<FormInput
@@ -66,7 +68,7 @@ export default class SignUp extends Component {
 						name="email"
 						value={email}
 						handleChange={this.handleChange}
-						label="Email"
+						label={t("form.email")}
 						required
 					/>
 					<FormInput
@@ -74,7 +76,7 @@ export default class SignUp extends Component {
 						name="password"
 						value={password}
 						handleChange={this.handleChange}
-						label="Password"
+						label={t("form.password")}
 						required
 					/>
 					<FormInput
@@ -82,12 +84,13 @@ export default class SignUp extends Component {
 						name="confirmPassword"
 						value={confirmPassword}
 						handleChange={this.handleChange}
-						label="Confirm Password"
+						label={t("form.confirmPassword")}
 						required
 					/>
-					<CustomButton type="submit"> Sign Up </CustomButton>
+					<CustomButton type="submit"> {t("form.signUp")} </CustomButton>
 				</form>
 			</div>
 		)
 	}
 }
+export default withTranslation()(SignUp);

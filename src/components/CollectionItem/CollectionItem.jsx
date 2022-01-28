@@ -2,11 +2,13 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {addItem} from '../../redux/cart/cart.actions';
 import CustomButton from '../CustomButton/CustomButton';
+import { useTranslation } from "react-i18next";
 
 import './collection-item.scss';
 
 const CollectionItem = ( {item, addItem} ) => {
 	const {name, price, imageUrl } = item;
+	const {t} = useTranslation();
 	return (
 	<div className="collection-item">
 
@@ -15,7 +17,7 @@ const CollectionItem = ( {item, addItem} ) => {
 			<span className="name">{name}</span>
 			<span className="price">${price}</span>
 		</div>
-		<CustomButton onClick={() => addItem(item)} inverted>ADD TO CART</CustomButton>
+		<CustomButton onClick={() => addItem(item)} inverted>{t( "cart.addToCart" )}</CustomButton>
 	</div>
 
 	);

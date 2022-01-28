@@ -1,10 +1,9 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import { connect } from 'react-redux';
-
+import './i18n';
 
 import './App.css';
-
 
 import HomePage from './pages/homepage/homepage';
 import ShopPage from './pages/shoppage/shop';
@@ -12,7 +11,6 @@ import SignInSignUp from './pages/sign-in-sign-up/signInSignUp';
 import CheckoutPage from './pages/checkout/checkout';
 import Contact from './pages/contact/contact';
 import Header from './components/Header/Header';
-
 
 import { auth, createUserProfile } from './firebase/firebase.utils';
 import { setCurrentUser } from './redux/user/user.actions';
@@ -45,6 +43,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<div>
+				<Suspense fallback={null}>
 				<Header />
 				<Routes>
 					<Route exact path="/" element={<HomePage />} />
@@ -63,6 +62,7 @@ class App extends React.Component {
 					/>
 					<Route path="/checkout" element={<CheckoutPage />} />
 				</Routes>
+				</Suspense>
 			</div>
 		);
 	}

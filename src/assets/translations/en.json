@@ -1,0 +1,41 @@
+{
+	"shop.label": "Shop",
+
+	"contact.label": "Contact",
+
+	"signIn.label": "Sign In",
+	"signIn.alreadyHaveAccount": "Already have an account",
+	"signIn.signInWithEmail": "Sign in with email and password",
+	"signIn.donotHaveAccount": "I do not have an account",
+	"signIn.signUpWithEmail": "Sign up with email and password",
+
+	"contact.header": "Get in Touch",
+
+	"directory.callToAction": "SHOP NOW",
+	"directory.hats": "HATS",
+	"directory.mens": "MENS",
+	"directory.womens": "WOMENS",
+	"directory.jackets": "JACKETS",
+	"directory.sneakers": "SNEAKERS",
+
+	"form.message": "Feel free to shoot a message , we are more than happy to hear from you",
+	"form.firstName": "First Name",
+	"form.lastName": "Last Name",
+	"form.email": "Email",
+	"form.submit": "Submit",
+	"form.password": "Password",
+	"form.confirmPassword": "Confirm Password",
+	"form.signIn": "Sign In",
+	"form.signUp": "Sign Up",
+	"form.signInWithGoogle": "Sign In With Google",
+	"cart.addToCart": "Add to Cart",
+	"cart.empty": "Your cart is empty",
+	"cart.goToCheckout": "Go to Checkout",
+	"checkout.product": "Product",
+	"checkout.description": "Description",
+	"checkout.quantity": "Quantity",
+	"checkout.price": "Price",
+	"checkout.remove": "Remove",
+	"checkout.total": "Total",
+	"checkout.payNow": "Pay Now"
+}
