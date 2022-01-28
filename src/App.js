@@ -10,6 +10,7 @@ import HomePage from './pages/homepage/homepage';
 import ShopPage from './pages/shoppage/shop';
 import SignInSignUp from './pages/sign-in-sign-up/signInSignUp';
 import CheckoutPage from './pages/checkout/checkout';
+import Contact from './pages/contact/contact';
 import Header from './components/Header/Header';
 
 
@@ -48,6 +49,7 @@ class App extends React.Component {
 				<Routes>
 					<Route exact path="/" element={<HomePage />} />
 					<Route path="/shop/*" element={<ShopPage />} />
+					<Route path="/contact" element={<Contact />} />
 					<Route
 						exact
 						path="/signin"
